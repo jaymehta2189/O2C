@@ -1,0 +1,4 @@
+ProductID,ProductName,Category,Price,Stock,Status
+PROD001,Laptop Dell i5,Electronics,55000,25,Active
+PROD002,Wireless Mouse,Accessories,1200,150,Active
+PROD003,USB Keyboard,Accessories,1500,100,Active

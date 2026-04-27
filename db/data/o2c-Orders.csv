@@ -1,0 +1,2 @@
+OrderID,CustomerID,OrderDate,TotalAmount,CreditStatus,OrderStatus,BlockedReason,Notes,SubmittedOn,ApprovedOn,ApprovedBy
+ORD001,CUST001,2026-04-24,55000,Approved,Confirmed,,Initial sample order,2026-04-24T10:00:00Z,2026-04-24T10:30:00Z,manager@company.com

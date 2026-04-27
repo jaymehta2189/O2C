@@ -1,0 +1,4 @@
+CustomerID,CustomerName,Email,Phone,Address,CreditLimit,UsedCredit,Status
+CUST001,Rahul Enterprises,rahul@enterprises.com,9876543210,"Pune, India",500000,120000,Active
+CUST002,Sunrise Traders,sunrise@traders.com,9988776655,"Mumbai, India",300000,50000,Active
+CUST003,Alpha Retail,alpha@retail.com,9123456780,"Nagpur, India",200000,0,Active

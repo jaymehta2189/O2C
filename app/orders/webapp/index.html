@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Orders</title>
+
+  <style>
+    html, body, body > div, #container, #container-uiarea {
+      height: 100%;
+      margin: 0;
+    }
+  </style>
+
+  <script
+    id="sap-ui-bootstrap"
+    src="https://ui5.sap.com/resources/sap-ui-core.js"
+    data-sap-ui-theme="sap_horizon"
+    data-sap-ui-compatVersion="edge"
+    data-sap-ui-async="true"
+    data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
+    data-sap-ui-resourceroots='{"o2c.orders":"./"}'
+    data-sap-ui-frame-options="trusted">
+  </script>
+</head>
+
+<body class="sapUiBody sapUiSizeCompact">
+  <div
+    data-sap-ui-component
+    data-name="o2c.orders"
+    data-id="container"
+    data-settings='{"id":"o2c.orders"}'
+    data-handle-validation="true">
+  </div>
+</body>
+</html>
