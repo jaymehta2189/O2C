@@ -3,7 +3,7 @@
   "sap.app": {
     "id": "o2c.orders",
     "type": "application",
-    "title": "Orders",
+    "title": "Sales Orders",
     "description": "Sales Orders List Report and Object Page",
     "applicationVersion": {
       "version": "1.0.0"
@@ -22,62 +22,64 @@
         "Orders-display": {
           "semanticObject": "Orders",
           "action": "display",
-          "title": "Orders",
+          "title": "Sales Orders",
           "signature": {
-            "parameters": {}
+            "parameters": {},
+            "additionalParameters": "allowed"
           }
         }
       }
     }
   },
+
   "sap.ui": {
     "technology": "UI5",
     "deviceTypes": {
       "desktop": true,
       "tablet": true,
-      "phone": true
+      "phone": false
     }
   },
+
   "sap.ui5": {
     "flexEnabled": false,
-    "rootView": {
-      "viewName": "sap.fe.templates.RootContainer.view.Fcl",
-      "type": "XML",
-      "async": true,
-      "id": "app"
-    },
+
     "dependencies": {
-      "minUI5Version": "1.108.0",
+      "minUI5Version": "1.120.17",
       "libs": {
-        "sap.fe.core": {},
         "sap.fe.templates": {},
-        "sap.f": {},
+        "sap.fe.core": {},
         "sap.m": {},
         "sap.ui.core": {},
-        "sap.ui.layout": {},
-        "sap.ui.table": {}
+        "sap.f": {}
       }
     },
+
     "contentDensities": {
       "compact": true,
       "cozy": true
     },
+
     "models": {
       "": {
         "dataSource": "mainService",
+        "preload": true,
         "settings": {
+          "synchronizationMode": "None",
           "operationMode": "Server",
+          "autoExpandSelect": true,
           "earlyRequests": true
+        }
+      },
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "o2c.orders.i18n.i18n"
         }
       }
     },
+
     "routing": {
-      "config": {
-        "routerClass": "sap.f.routing.Router",
-        "viewType": "XML",
-        "async": true,
-        "controlAggregation": "beginColumnPages"
-      },
       "routes": [
         {
           "pattern": ":?query:",
@@ -97,7 +99,15 @@
           "name": "sap.fe.templates.ListReport",
           "options": {
             "settings": {
-              "entitySet": "Orders"
+              "entitySet": "Orders",
+              "initialLoad": true,
+              "navigation": {
+                "Orders": {
+                  "detail": {
+                    "route": "OrdersObjectPage"
+                  }
+                }
+              }
             }
           }
         },

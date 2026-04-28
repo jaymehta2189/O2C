@@ -6,11 +6,8 @@ sap.ui.define([
   return AppComponent.extend("o2c.orders.Component", {
     metadata: {
       manifest: "json"
-    },
-    
-    init: function () {
-      AppComponent.prototype.init.apply(this, arguments);
-      this.getRouter().initialize();
     }
+    // No init() override — sap.fe.core.AppComponent manages
+    // its own router and lifecycle internally
   });
 });

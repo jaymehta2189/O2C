@@ -20,7 +20,7 @@
   "sap.ui5": {
     "flexEnabled": false,
     "rootView": {
-      "viewName": "o2c.home.view.Home",
+      "viewName": "o2c.home.view.App",
       "type": "XML",
       "async": true,
       "id": "app"
