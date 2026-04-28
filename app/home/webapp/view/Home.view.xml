@@ -2,20 +2,99 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
     xmlns:core="sap.ui.core"
-    controllerName="o2c.home.controller.Home">
+    xmlns:f="sap.f"
+    controllerName="o2c.home.controller.Home"
+    displayBlock="true">
 
-    <Page title="Home">
+    <f:ShellBar
+        id="shellBar"
+        title="Order-to-Cash System"
+        showCopilot="false">
+    </f:ShellBar>
+<App >
+    <Page id="home" title="O2C Dashboard">
         <content>
-            <GenericTile header="Orders" press=".onOrders">
-                <tileContent>
-                    <TileContent>
-                        <content>
-                            <core:Icon src="sap-icon://sales-order" size="2rem"/>
-                        </content>
-                    </TileContent>
-                </tileContent>
-            </GenericTile>
+            <VBox
+                class="sapUiLargeMargin"
+                width="100%">
+                
+                <Text text="Welcome to Order-to-Cash System" class="sapUiMediumMarginBottom" />
+                
+                <HBox
+                    justifyContent="SpaceBetween"
+                    wrap="Wrap"
+                    class="sapUiMediumMargin">
+                    
+                    <!-- Orders Tile -->
+                    <GenericTile
+                        header="Orders"
+                        press=".onOrders"
+                        class="sapUiSmallMarginEnd sapUiSmallMarginBottom">
+                        <tileContent>
+                            <TileContent footer="View Sales Orders">
+                                <content>
+                                    <VBox justifyContent="Center" alignItems="Center" height="120px">
+                                        <core:Icon src="sap-icon://sales-order" size="3rem" class="sapUiMediumMarginBottom"/>
+                                        <Text text="Manage Orders" textAlign="Center"/>
+                                    </VBox>
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+
+                    <!-- Customers Tile -->
+                    <GenericTile
+                        header="Customers"
+                        class="sapUiSmallMarginEnd sapUiSmallMarginBottom">
+                        <tileContent>
+                            <TileContent footer="View Customers">
+                                <content>
+                                    <VBox justifyContent="Center" alignItems="Center" height="120px">
+                                        <core:Icon src="sap-icon://group" size="3rem" class="sapUiMediumMarginBottom"/>
+                                        <Text text="Customer Management" textAlign="Center"/>
+                                    </VBox>
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+
+                    <!-- Products Tile -->
+                    <GenericTile
+                        header="Products"
+                        class="sapUiSmallMarginEnd sapUiSmallMarginBottom">
+                        <tileContent>
+                            <TileContent footer="View Products">
+                                <content>
+                                    <VBox justifyContent="Center" alignItems="Center" height="120px">
+                                        <core:Icon src="sap-icon://product" size="3rem" class="sapUiMediumMarginBottom"/>
+                                        <Text text="Product Catalog" textAlign="Center"/>
+                                    </VBox>
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+
+                    <!-- Approvals Tile -->
+                    <GenericTile
+                        header="Approvals"
+                        class="sapUiSmallMarginEnd sapUiSmallMarginBottom">
+                        <tileContent>
+                            <TileContent footer="Order Approvals">
+                                <content>
+                                    <VBox justifyContent="Center" alignItems="Center" height="120px">
+                                        <core:Icon src="sap-icon://accept" size="3rem" class="sapUiMediumMarginBottom"/>
+                                        <Text text="Approve Orders" textAlign="Center"/>
+                                    </VBox>
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+
+                </HBox>
+
+            </VBox>
         </content>
     </Page>
+</App>
 
 </mvc:View>

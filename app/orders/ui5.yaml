@@ -9,7 +9,12 @@ server:
     - name: fiori-tools-proxy
       afterMiddleware: compression
       configuration:
-        ignoreCertErrors: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
+        ignoreCertErrors: false
+        backend:
+          - path: /odata
+            url: http://localhost:4004
+          - path: /catalog
+            url: http://localhost:4004
         ui5:
           path:
             - /resources

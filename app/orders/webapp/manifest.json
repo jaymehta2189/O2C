@@ -47,13 +47,15 @@
       "id": "app"
     },
     "dependencies": {
-      "minUI5Version": "1.120.0",
+      "minUI5Version": "1.108.0",
       "libs": {
+        "sap.fe.core": {},
         "sap.fe.templates": {},
         "sap.f": {},
         "sap.m": {},
         "sap.ui.core": {},
-        "sap.ui.layout": {}
+        "sap.ui.layout": {},
+        "sap.ui.table": {}
       }
     },
     "contentDensities": {
@@ -73,7 +75,8 @@
       "config": {
         "routerClass": "sap.f.routing.Router",
         "viewType": "XML",
-        "async": true
+        "async": true,
+        "controlAggregation": "beginColumnPages"
       },
       "routes": [
         {
@@ -94,8 +97,7 @@
           "name": "sap.fe.templates.ListReport",
           "options": {
             "settings": {
-              "entitySet": "Orders",
-              "create": true
+              "entitySet": "Orders"
             }
           }
         },

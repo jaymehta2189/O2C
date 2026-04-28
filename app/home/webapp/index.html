@@ -2,6 +2,14 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <title>O2C Home</title>
+  <style>
+    html, body, body > div, #container, #container-uiarea {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
 
   <script
     id="sap-ui-bootstrap"
@@ -9,15 +17,17 @@
     data-sap-ui-theme="sap_horizon"
     data-sap-ui-async="true"
     data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
-    data-sap-ui-resourceroots='{"o2c.home":"./"}'>
+    data-sap-ui-resourceroots='{"o2c.home":"./"}'
+    data-sap-ui-frame-options="trusted">
   </script>
 
 </head>
 
-<body class="sapUiBody">
+<body class="sapUiBody sapUiSizeCompact">
   <div
     data-sap-ui-component
-    data-name="o2c.home">
+    data-name="o2c.home"
+    data-id="container">
   </div>
 </body>
 </html>
